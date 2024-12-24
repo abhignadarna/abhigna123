@@ -28,7 +28,6 @@ ggplot(Shopping_data, aes(x = AnnualIncome, y = SpendingScore)) +
 
 # Question-1(B):
 
-# Histogram of Spending Score with Normal Curve Overlay
 ggplot(Shopping_data, aes(x = SpendingScore)) +
   geom_histogram(aes(y = ..density..), bins = 10, fill = "lightblue", color = "black", alpha = 0.7) +
   stat_function(fun = dnorm, args = list(mean = mean(Shopping_data$SpendingScore), sd = sd(Shopping_data$SpendingScore)),
